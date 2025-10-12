@@ -27,6 +27,11 @@ int main() {
     char repetir;
 
     do {
+        cout <<"\n-------UNIVERSIDAD TECNOLOGICA DE PANAMA------\n";
+        cout <<"\n---FACULTAD DE INGENIERIA ELECTRICA--- \n";
+        cout << "\n--INGENIERIA ELECTRICA Y ELECTRONICA--\n";    
+        cout <<"\n -PROYECTO 2 - METODOS NUMERICOS- \n";   
+
         cout << "\n=====================================================\n";
         cout << "   RESOLUCION DE SISTEMAS DE ECUACIONES LINEALES\n";
         cout << "   Aplicacion: Analisis de Mallas o Nodos Electricos\n";
