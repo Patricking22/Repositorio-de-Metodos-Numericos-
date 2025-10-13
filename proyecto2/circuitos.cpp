@@ -5,9 +5,11 @@
 using namespace std;
 
 /* ================================================================
-   Programa: Resolución de sistemas de ecuaciones lineales
+   Proyecto 2: Resolución de sistemas de ecuaciones lineales
+   Materia: Métodos Numéricos
    Aplicación: Análisis de mallas o nodos eléctricos
-   Autor: Estudiante de Ingeniería Eléctrica
+   Autor: Patrick Alexander Castillo Serrano   Ced: 4-775-462
+   Grupo: 1EE131
    Lenguaje: C++
    ================================================================
 */
@@ -27,17 +29,17 @@ int main() {
     char repetir;
 
     do {
-        cout <<"\n-------UNIVERSIDAD TECNOLOGICA DE PANAMA------\n";
-        cout <<"\n---FACULTAD DE INGENIERIA ELECTRICA--- \n";
-        cout << "\n--INGENIERIA ELECTRICA Y ELECTRONICA--\n";    
-        cout <<"\n -PROYECTO 2 - METODOS NUMERICOS- \n";   
+        cout <<"     -------UNIVERSIDAD TECNOLOGICA DE PANAMA------\n";
+        cout <<"     ---FACULTAD DE INGENIERIA ELECTRICA--- \n";
+        cout <<"     --INGENIERIA ELECTRICA Y ELECTRONICA--\n";    
+        cout <<"        -PROYECTO 2 - METODOS NUMERICOS- ";   
 
         cout << "\n=====================================================\n";
         cout << "   RESOLUCION DE SISTEMAS DE ECUACIONES LINEALES\n";
         cout << "   Aplicacion: Analisis de Mallas o Nodos Electricos\n";
         cout << "=====================================================\n";
 
-        // --- Nueva sección: lista descriptiva de métodos ---
+        // --- sección 1 : lista descriptiva de métodos ---
         cout << "\nLISTA DE METODOS DISPONIBLES:\n";
         cout << "-----------------------------------------------------\n";
         cout << "1. Metodo de Jacobi (Iterativo):\n";
@@ -92,7 +94,7 @@ int main() {
             cout << "Ingrese el numero maximo de iteraciones: ";
             cin >> maxIter;
         }
-
+           //Patrick Alexander Castillo Serrano   Ced: 4-775-462
         cout << "\n-----------------------------------------------------\n";
 
         switch (opcion) {
@@ -139,7 +141,7 @@ void metodoJacobi(vector<vector<double>> A, vector<double> b, double tol, int ma
             double error = fabs((xNuevo[i] - x[i]) / (xNuevo[i] + 1e-12)) * 100.0;
             if (error > errorMax) errorMax = error;
         }
-
+            //Patrick Alexander Castillo Serrano   Ced: 4-775-462
         cout << setw(8) << iter;
         for (int i = 0; i < n; i++) cout << setw(12) << fixed << setprecision(6) << xNuevo[i];
         cout << setw(12) << errorMax << endl;
@@ -182,7 +184,7 @@ void metodoGaussSeidel(vector<vector<double>> A, vector<double> b, double tol, i
             double error = fabs((x[i] - xViejo[i]) / (x[i] + 1e-12)) * 100.0;
             if (error > errorMax) errorMax = error;
         }
-
+            //Patrick Alexander Castillo Serrano   Ced: 4-775-462
         cout << setw(8) << iter;
         for (int i = 0; i < n; i++) cout << setw(12) << fixed << setprecision(6) << x[i];
         cout << setw(12) << errorMax << endl;
@@ -243,7 +245,7 @@ void doolittleLU(vector<vector<double>> A, vector<double> b) {
             L[j][i] = (A[j][i] - suma) / U[i][i];
         }
     }
-
+        //Patrick Alexander Castillo Serrano   Ced: 4-775-462
     y[0] = b[0];
     for (int i = 1; i < n; i++) {
         double suma = 0.0;
@@ -273,7 +275,7 @@ void matrizInversa(vector<vector<double>> A, vector<double> b) {
     inv[0][1] = -A[0][1] / det;
     inv[1][0] = -A[1][0] / det;
     inv[1][1] = A[0][0] / det;
-
+        //Patrick Alexander Castillo Serrano   Ced: 4-775-462
     vector<double> x(n);
     for (int i = 0; i < n; i++) {
         x[i] = inv[i][0]*b[0] + inv[i][1]*b[1];
